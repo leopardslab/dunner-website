@@ -525,4 +525,7 @@ img {
     text-align: left !important;
     padding-left: 0 !important;
   }
+  .homePage-container{
+    margin: auto !important;
+  }
 }

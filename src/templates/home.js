@@ -4,11 +4,8 @@ import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import styled, { injectGlobal } from "react-emotion";
 import { Layout } from "$components";
-import NextPrevious from "../components/NextPrevious";
 import "../components/styles.css";
 import config from "../../config";
-
-const forcedNavOrder = config.sidebar.forcedNavOrder;
 
 injectGlobal`
   * {
@@ -46,6 +43,7 @@ injectGlobal`
 export default class MDXRuntimeTest extends Component {
   render() {
     const { data } = this.props;
+    console.debug("hello2", ...this.props);
     const {
       allMdx,
       mdx,
@@ -53,41 +51,42 @@ export default class MDXRuntimeTest extends Component {
         siteMetadata: { docsLocation, title }
       }
     } = data;
+    // const gitHub = require('../components/images/github.svg');
 
-    const navItems = allMdx.edges
-      .map(({ node }) => node.fields.slug)
-      .filter(slug => slug !== "/")
-      .sort()
-      .reduce(
-        (acc, cur) => {
-          if (forcedNavOrder.find(url => url === cur)) {
-            return { ...acc, [cur]: [cur] };
-          }
+    // const navItems = allMdx.edges
+    //   .map(({ node }) => node.fields.slug)
+    //   .filter(slug => slug !== "/")
+    //   .sort()
+    //   .reduce(
+    //     (acc, cur) => {
+    //       if (forcedNavOrder.find(url => url === cur)) {
+    //         return { ...acc, [cur]: [cur] };
+    //       }
 
-          const prefix = cur.split("/")[1];
+    //       const prefix = cur.split("/")[1];
 
-          if (prefix && forcedNavOrder.find(url => url === `/${prefix}`)) {
-            return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
-          } else {
-            return { ...acc, items: [...acc.items, cur] };
-          }
-        },
-        { items: [] }
-      );
+    //       if (prefix && forcedNavOrder.find(url => url === `/${prefix}`)) {
+    //         return { ...acc, [`/${prefix}`]: [...acc[`/${prefix}`], cur] };
+    //       } else {
+    //         return { ...acc, items: [...acc.items, cur] };
+    //       }
+    //     },
+    //     { items: [] }
+    //   );
 
-    const nav = forcedNavOrder
-      .reduce((acc, cur) => {
-        return acc.concat(navItems[cur]);
-      }, [])
-      .concat(navItems.items)
-      .map(slug => {
-        if (slug) {
-          const { node } = allMdx.edges.find(
-            ({ node }) => node.fields.slug === slug
-          );
-          return { title: node.fields.title, url: node.fields.slug };
-        }
-      });
+    // const nav = forcedNavOrder
+    //   .reduce((acc, cur) => {
+    //     return acc.concat(navItems[cur]);
+    //   }, [])
+    //   .concat(navItems.items)
+    //   .map(slug => {
+    //     if (slug) {
+    //       const { node } = allMdx.edges.find(
+    //         ({ node }) => node.fields.slug === slug
+    //       );
+    //       return { title: node.fields.title, url: node.fields.slug };
+    //     }
+    //   });
 
     // meta tags
     const metaTitle = mdx.frontmatter.metaTitle;
@@ -121,13 +120,18 @@ export default class MDXRuntimeTest extends Component {
         </Helmet>
         <div className={"titleWrapper"}>
           <h1 className={"title"}>{mdx.fields.title}</h1>
+          {/* <Edit className={'mobileView'}>
+            <Link className={'gitBtn'} to={`${docsLocation}/${mdx.parent.relativePath}`}>
+              <img src={gitHub} alt={'Github logo'} /> Edit on GitHub
+            </Link>
+          </Edit> */}
         </div>
         <div className={"mainWrapper"}>
           <MDXRenderer>{mdx.code.body}</MDXRenderer>
         </div>
-        <div className={"addPaddTopBottom"}>
+        {/* <div className={'addPaddTopBottom'}>
           <NextPrevious mdx={mdx} nav={nav} />
-        </div>
+        </div> */}
       </Layout>
     );
   }

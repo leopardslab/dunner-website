@@ -29,19 +29,30 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors); // eslint-disable-line no-console
+          console.error(result.errors); // eslint-disable-line no-console
           reject(result.errors);
         }
 
         // Create blog posts pages.
         result.data.allMdx.edges.forEach(({ node }) => {
-          createPage({
-            path: node.fields.slug ? node.fields.slug : "/",
-            component: path.resolve("./src/templates/docs.js"),
-            context: {
-              id: node.fields.id
-            }
-          });
+          console.debug("###---", node.fields.slug);
+          if (!node.fields.slug || node.fields.slug == "/") {
+            console.debug("---###");
+            createPage({
+              path: "/",
+              component: path.resolve("./src/templates/home.js"),
+              context: {
+                id: node.fields.id
+              }
+            });
+          } else
+            createPage({
+              path: node.fields.slug,
+              component: path.resolve("./src/templates/docs.js"),
+              context: {
+                id: node.fields.id
+              }
+            });
         });
       })
     );
@@ -72,7 +83,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     if (value === "index") {
       value = "";
-    }
+    } else value = value.toLowerCase();
 
     createNodeField({
       name: `slug`,

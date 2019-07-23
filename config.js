@@ -1,35 +1,42 @@
 const config = {
-	"gatsby": {
-		"pathPrefix": "/",
-		"siteUrl": "https://learn.hasura.io",
-		"gaTrackingId": null
-	},
-	"header": {
-		"logo": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg",
-		"title": "Gatsby Gitbook Boilerplate",
-		"githubUrl": "https://github.com/hasura/gatsby-gitbook-boilerplate",
-		"helpUrl": "",
-		"tweetText": "",
-		"links": [
-			{ "text": "", "link": ""}
-		],
-	},
-	"sidebar": {
-		"forcedNavOrder": [
-			"/introduction",
-    		"/codeblock"
-		],
-		"links": [
-			{ "text": "", "link": ""},
-		]
-	},
-	"siteMetadata": {
-		"title": "Gatsby Gitbook Boilerplate | Hasura",
-		"description": "Documentation built with mdx. Powering learn.hasura.io ",
-		"ogImage": null,
-		"docsLocation": "https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content",
-		"favicon": "https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg"
-	},
+  gatsby: {
+    pathPrefix: "/",
+    siteUrl: "https://dunner.com",
+    gaTrackingId: null
+  },
+  header: {
+    logo: "https://graphql-engine-cdn.hasura.io/img/hasura_icon_white.svg",
+    title: "Dunner",
+    githubUrl: "https://github.com/leopardslab/dunner",
+    helpUrl: "",
+    tweetText: "",
+    links: [
+      { text: "Docs", link: "/docs" },
+      {
+        text: "Releases",
+        link: "https://github.com/leopardslab/dunner/releases"
+      }
+    ]
+  },
+  sidebar: {
+    forcedNavOrder: [
+      "/introduction",
+      "/docs",
+      "/docs/home",
+      "/docs/introduction-to-dunner",
+      "/docs/installation-guide",
+      "/docs/user-guide",
+      "/docs/developer-guide"
+    ],
+    links: [{ text: "", link: "" }]
+  },
+  siteMetadata: {
+    title: "Dunner",
+    description: "A docker based task-runner",
+    ogImage: null,
+    docsLocation: "https://github.com/leopardslab/dunner/wiki",
+    favicon: "https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg"
+  }
 };
 
 module.exports = config;

@@ -14,19 +14,20 @@ module.exports = {
     helpUrl: config.header.helpUrl,
     tweetText: config.header.tweetText,
     headerLinks: config.header.links,
-    siteUrl: config.gatsby.siteUrl,
+    siteUrl: config.gatsby.siteUrl
   },
   plugins: [
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sharp',
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-          component: require.resolve(`./src/templates/docs.js`)
+        component: require.resolve(`./src/templates/docs.js`),
+        component: require.resolve(`./src/templates/home.js`)
       }
     },
     {
-      resolve: 'gatsby-mdx',
+      resolve: "gatsby-mdx",
       options: {
         gatsbyRemarkPlugins: [
           {
@@ -37,15 +38,15 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files'
+            resolve: "gatsby-remark-copy-linked-files"
           }
         ],
         extensions: [".mdx", ".md"]
       }
     },
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-remove-trailing-slashes',
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-remove-trailing-slashes",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -61,8 +62,8 @@ module.exports = {
         // Puts tracking script in the head instead of the body
         head: true,
         // enable ip anonymization
-        anonymize: false,
-      },
-    },
+        anonymize: false
+      }
+    }
   ]
 };
