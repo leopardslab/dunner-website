@@ -27,7 +27,9 @@ const Content = styled("main")`
     margin-top: 3rem;
   }
 `;
-
+const CenterStyle = {
+  margin: 'auto'
+}
 const MaxWidth = styled("div")`
   @media only screen and (max-width: 50rem) {
     width: 100%;
@@ -58,7 +60,7 @@ const Layout = ({ children, location }) => (
       ) : (
         <Wrapper>
           <Content>
-            <MaxWidth className="homePage-container">{children}</MaxWidth>
+            <MaxWidth className="homePage-container" style={CenterStyle}>{children}</MaxWidth>
           </Content>
         </Wrapper>
       )}
