@@ -46,8 +46,9 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
+    "get-wiki": "git clone https://github.com/leopardslab/dunner.wiki.git content/docs/wiki",
     "build": "gatsby build --prefix-paths",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "get-wiki && gatsby build && gh-pages -d public -b master"
   },
   "devDependencies": {
     "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
