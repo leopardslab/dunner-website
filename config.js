@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: "/",
-    siteUrl: "https://dunner.com",
+    siteUrl: "https://dunner.io",
     gaTrackingId: null
   },
   header: {
