@@ -2,7 +2,7 @@
   "name": "gatsby-gitbook-boilerplate",
   "private": true,
   "description": "Documentation, built with mdx",
-  "author": "Praveen <praveen@hasura.io> (@praveenweb)",
+  "author": "LeopardsLab Community",
   "version": "0.0.1",
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
@@ -46,7 +46,7 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
-    "get-wiki": "git clone https://github.com/leopardslab/dunner.wiki.git content/docs/wiki",
+    "get-wiki": "git clone https://github.com/leopardslab/dunner.wiki.git content/docs",
     "build": "gatsby build --prefix-paths",
     "deploy": "get-wiki && gatsby build && gh-pages -d public -b master"
   },
