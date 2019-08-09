@@ -12,4 +12,5 @@ before_script:
   - "yarn"
 
 script:
+  - npm run get-wiki
   - npm run build
