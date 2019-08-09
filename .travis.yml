@@ -9,7 +9,7 @@ cache:
 
 before_script:
   - "npm i -g gatsby-cli"
-  - "yarn"
+  - "npm install"
 
 script:
   - npm run get-wiki
