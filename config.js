@@ -12,6 +12,10 @@ const config = {
     tweetText: "",
     links: [
       { text: "Docs", link: "/docs" },
+      { 
+        text: "Cookbook Recipes",
+        link: "/cookbook-recipes"
+      },
       {
         text: "Releases",
         link: "https://github.com/leopardslab/dunner/releases"
@@ -26,7 +30,8 @@ const config = {
       "/docs/introduction-to-dunner",
       "/docs/installation-guide",
       "/docs/user-guide",
-      "/docs/developer-guide"
+      "/docs/developer-guide",
+      "/cookbook-recipes"
     ],
     links: [{ text: "", link: "" }]
   },
