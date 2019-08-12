@@ -50,11 +50,10 @@
     "get-cookbook": "sh ./get_recipes.sh",
     "update-content": "get-wiki && get-cookbook",
     "build": "gatsby build --prefix-paths",
-    "deploy": "get-wiki && get-cookbook && gatsby build && gh-pages -d public -b master"
+    "deploy": "get-wiki && get-cookbook && gatsby build"
   },
   "devDependencies": {
     "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
-    "gh-pages": "^2.0.1",
     "prism-react-renderer": "^0.1.6"
   }
 }
