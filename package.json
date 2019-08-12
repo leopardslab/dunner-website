@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-gitbook-boilerplate",
+  "name": "dunner-io",
   "private": true,
   "description": "Documentation, built with mdx",
   "author": "LeopardsLab Community",
@@ -50,7 +50,7 @@
     "get-cookbook": "sh ./get_recipes.sh",
     "update-content": "get-wiki && get-cookbook",
     "build": "gatsby build --prefix-paths",
-    "deploy": "get-wiki && get-cookbook && gatsby build"
+    "deploy": "npm run get-wiki && npm run get-cookbook && npm run build"
   },
   "devDependencies": {
     "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
