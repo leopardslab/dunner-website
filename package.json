@@ -46,7 +46,7 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
-    "get-wiki": "git clone --depth 1 https://github.com/leopardslab/dunner.wiki.git content/docs",
+    "get-wiki": "if cd content/docs; then git pull; else git clone --depth 1 https://github.com/leopardslab/dunner.wiki.git content/docs;",
     "get-cookbook": "sh ./get_recipes.sh",
     "update-content": "get-wiki && get-cookbook",
     "build": "gatsby build --prefix-paths",
