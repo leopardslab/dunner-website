@@ -1,4 +1,5 @@
 # dunner-website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/511f3bcd-19c2-459d-bb4d-27c86df161f2/deploy-status)](https://app.netlify.com/sites/nifty-bohr-6ae691/deploys)
 
 Dunner website built using [Gatsby](https://www.gatsbyjs.org) framework based on React.
 
