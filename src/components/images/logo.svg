@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 2.51px;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        font-size: 140.075px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #fff;
+        font-family: Gotham;
+        font-weight: 500;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        text-anchor: middle;
+        text-transform: uppercase;
+      }
+
+      .cls-3 {
+        font-size: 116.195px;
+      }
+
+      .cls-4 {
+        font-size: 112.627px;
+      }
+
+      .cls-5 {
+        font-size: 140.019px;
+      }
+
+      .cls-6 {
+        font-size: 158.286px;
+      }
+
+      .cls-7 {
+        font-size: 131.75px;
+        fill: #0072ff;
+        font-family: Varsity-Regular, "Varsity Regular";
+      }
+    </style>
+    <filter id="filter" x="174.469" y="24.719" width="484.531" height="587.875" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#0072ff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="fill: ; filter: url(#filter)">
+    <path id="path" class="cls-1" d="M643.856,229.961h-27.92v312.1c0,38.951-28.7,70.527-64.1,70.527H286.35c-35.4,0-64.1-31.576-64.1-70.527v-312.1H189.6c-8.363,0-15.142-7.459-15.142-16.66s6.779-16.66,15.142-16.66H222.25V151.393H615.936v45.248h27.92c8.362,0,15.141,7.459,15.141,16.66S652.218,229.961,643.856,229.961ZM280.453,69.4h112.4V48.237c0-12.984,9.566-23.509,21.366-23.509h17.834c11.8,0,21.367,10.526,21.367,23.509V69.4h99.582c33.45,0,60.567,29.836,60.567,66.64H219.886C219.886,99.231,247,69.4,280.453,69.4Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#path" style="stroke: #fff; filter: none; fill: none"/>
+  <text id="My_Sql" data-name="My  Sql" class="cls-2" transform="translate(316.32 249.533) rotate(-14.32) scale(0.444)"><tspan x="0">My </tspan><tspan x="0" dy="168.089">Sql</tspan></text>
+  <text id="Mongo_db" data-name="Mongo db" class="cls-3" transform="translate(492.554 254.961) rotate(22.045) scale(0.444)"><tspan x="0">Mongo</tspan><tspan x="0" dy="139.434">db</tspan></text>
+  <text id="Django" class="cls-4" transform="translate(422.327 405.162) rotate(-0.482) scale(0.549)"><tspan x="0">Django</tspan></text>
+  <text id="Python" class="cls-5" transform="translate(414.852 496.592) rotate(-0.482) scale(0.445)"><tspan x="0">Python</tspan></text>
+  <text id="c_" data-name="c++" class="cls-6" transform="translate(416.802 579.46) rotate(-0.482) scale(0.445)"><tspan x="0">c++</tspan></text>
+  <text id="Dunner" class="cls-7" x="417.566" y="734.959"><tspan x="417.566">Dunner</tspan></text>
+</svg>
