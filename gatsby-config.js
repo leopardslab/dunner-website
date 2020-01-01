@@ -39,7 +39,8 @@ module.exports = {
           },
           {
             resolve: "gatsby-remark-copy-linked-files"
-          }
+          },
+          "gatsby-remark-autolink-headers"
         ],
         extensions: [".mdx", ".md"]
       }
